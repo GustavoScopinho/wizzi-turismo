@@ -6,14 +6,13 @@ export const Form = styled.form`
 `
 export const ContainerForm = styled.fieldset`
   width: 500px;
-  max-height: 500px;
+  max-height: 550px;
   background-color: #fff;
   border-radius: 8px;
-  margin-top: -80px;
   border: none;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4);
   background-color: rgba(00, 0, 0, 0.4);
-  padding: 10px;
+  padding: 25px;
 `
 export const Fieldset = styled.fieldset`
   display: flex;

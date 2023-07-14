@@ -5,8 +5,7 @@ import { Form } from '../Form/Form'
 export function Section() {
   return (
     <>
-      <S.Section>
-        <img src={ImgMaldivas} alt="Imagem de noite em Ilha Maldivas" />
+      <S.Section style={{ backgroundImage: `url(${ImgMaldivas})` }}>
         <Form />
       </S.Section>
     </>
