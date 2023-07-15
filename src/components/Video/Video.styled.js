@@ -15,15 +15,32 @@ export const ContainerVideo = styled.div`
   display: flex;
   align-items: center;
   gap: 30px;
+
+  @media (max-width: 1280px) {
+    flex-direction: column;
+  }
 `
 
 export const Iframe = styled.iframe`
   width: 700px;
   height: 400px;
+
+  @media (max-width: 768px) {
+    width: 84vw;
+  }
 `
-export const ContainerText = styled.div``
+export const ContainerText = styled.div`
+  display: flex;
+  justify-content: center;
+`
 export const H2 = styled.h2`
   width: 700px;
-  font-size: 32px;
+  font-size: 2vw;
   color: #fff;
+
+  @media (max-width: 768px) {
+    width: 80%;
+    font-size: 3vw;
+    text-align: center;
+  }
 `

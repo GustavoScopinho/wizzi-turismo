@@ -22,6 +22,7 @@ export const MenuContainer = styled.div`
   display: none;
   border-bottom: 1px solid rgba(00, 0, 0, 0.1);
   background-color: #f9f9f9;
+  /* transition: transform 2s ease; */
 
   ${({ isOpen }) =>
     isOpen &&

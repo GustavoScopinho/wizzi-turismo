@@ -17,15 +17,31 @@ export const Figure = styled.figure`
 
   img {
     border-radius: 4px;
+
+    @media (max-width: 768px) {
+      width: 84vw;
+    }
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 `
 
 export const H2 = styled.h2`
   width: 35%;
-  font-size: 42px;
+  font-size: 2.3vw;
   color: #3d3d3d;
 
   span {
     color: #1eb5ba;
+  }
+
+  @media (max-width: 1200px) {
+    width: 50%;
+    font-size: 3.4vw;
+  }
+  @media (max-width: 768px) {
+    width: 80%;
+    font-size: 4.4vw;
   }
 `

@@ -13,6 +13,11 @@ export const ContainerForm = styled.fieldset`
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4);
   background-color: rgba(00, 0, 0, 0.4);
   padding: 25px;
+
+  @media (max-width: 768px) {
+    width: 380px;
+    padding: 10px;
+  }
 `
 export const Fieldset = styled.fieldset`
   display: flex;
@@ -36,11 +41,19 @@ export const ContainerInput = styled.div`
     width: 225px;
     height: 40px;
     border: 1px solid rgba(00, 0, 0, 0.1);
+
+    @media (max-width: 768px) {
+      width: 170px;
+    }
   }
 `
 export const ContainerName = styled(ContainerInput)`
   input {
     width: 480px;
+
+    @media (max-width: 768px) {
+      width: 360px;
+    }
   }
 `
 export const ContainerButton = styled.fieldset`
@@ -57,6 +70,10 @@ export const ContainerButton = styled.fieldset`
     border: none;
     font-weight: 600;
     cursor: pointer;
+
+    @media (max-width: 768px) {
+      width: 360px;
+    }
   }
 `
 export const Legend = styled.legend``

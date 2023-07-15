@@ -62,9 +62,16 @@ export const Navegation = styled.nav`
     color: #fff;
     padding-right: 20px;
   }
+  @media (max-width: 768px) {
+    margin-left: 20px;
+  }
 `
 export const ContainerPayment = styled.div`
   margin-right: 100px;
+
+  @media (max-width: 768px) {
+    margin-right: 20px;
+  }
 `
 export const ContainerText = styled.div`
   background-color: #1eb5ba;
@@ -77,4 +84,8 @@ export const ContainerText = styled.div`
 export const P = styled.p`
   color: #fff;
   margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `

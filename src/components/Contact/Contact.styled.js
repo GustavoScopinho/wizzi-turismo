@@ -17,6 +17,10 @@ export const H2 = styled.h2`
   text-align: center;
   color: #1eb5ba;
   margin-bottom: 40px;
+
+  @media (max-width: 768px) {
+    font-size: 26px;
+  }
 `
 
 export const Iframe = styled.iframe`
