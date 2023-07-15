@@ -13,7 +13,6 @@ export function Video() {
             allowfullscreen
           ></S.Iframe>
           <S.ContainerText>
-            <S.H2>Não falta praia bonita por aqui!</S.H2>
             <S.H2>
               Diversos lugares incríveis para você conhecer, e cheia de pousadas
               charmosas de frente para o mar.

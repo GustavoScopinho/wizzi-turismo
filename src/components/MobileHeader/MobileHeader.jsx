@@ -1,14 +1,26 @@
-import * as S from './Header.styled'
+import * as S from './MobileHeader.styled'
+import { useState } from 'react'
 import LogoWizzi from './../../assets/wizzi-logo.png'
-import { UserCircle } from 'lucide-react'
+import { AlignJustify } from 'lucide-react'
 
-export function Header() {
+export function MobileHeader() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
     <>
       <S.Header>
+        <S.ContainerIcon isOpen={isOpen}>
+          <AlignJustify onClick={handleToggle} />
+        </S.ContainerIcon>
         <S.Figure>
           <img src={LogoWizzi} alt="Logo Wizzi Turismos" />
         </S.Figure>
+      </S.Header>
+      <S.MenuContainer isOpen={isOpen}>
         <S.Nav>
           <S.Ul>
             <S.Li>
@@ -23,12 +35,11 @@ export function Header() {
           </S.Ul>
           <S.Ul>
             <S.Li>
-              <UserCircle size={'32px'} stroke-width={'1px'} />
               <S.A>Fazer login</S.A>
             </S.Li>
           </S.Ul>
         </S.Nav>
-      </S.Header>
+      </S.MenuContainer>
     </>
   )
 }

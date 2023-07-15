@@ -13,16 +13,15 @@ export const Figure = styled.figure`
 `
 export const ContainerInformation = styled.section`
   width: 100%;
-  /* height: 250px; */
   background-color: #1eb5ba;
   margin-top: 100px;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid #e8e8e8;
-  border-bottom: 1px solid #e8e8e8;
 `
 
 export const LegalInformation = styled.div`
