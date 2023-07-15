@@ -17,7 +17,7 @@ export const ContainerVideo = styled.div`
   gap: 30px;
 
   @media (max-width: 1280px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 `
 
