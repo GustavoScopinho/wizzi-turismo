@@ -1,5 +1,7 @@
 import { useForm } from 'react-hook-form'
 import * as S from './Form.styled'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import { yupResolver } from '@hookform/resolvers/yup'
 
 import { object, string, date, number } from 'yup'
@@ -9,7 +11,7 @@ const schema = object({
   destino: string().required('Campo obrigatório.'),
   entrada: string('Escolha uma data válida').required('Campo obrigatório.'),
   saida: string('Escolha uma data válida').required('Campo obrigatório.'),
-  adultos: string().required('Campo obrigatório.'),
+  adultos: string().required('Campo obrigatório.').integer(),
   criancas: string(),
   nome: string().required('Campo obrigatório.'),
   email: string()
@@ -27,12 +29,14 @@ export function Form() {
 
   const handleSubmit = data => {
     console.log(data)
+    toast.success('Viagem confirmada!', {
+      position: 'top-center'
+    })
   }
-
-  console.log(errors)
 
   return (
     <>
+      <ToastContainer />
       <S.Form onSubmit={onSubmit(handleSubmit)}>
         <S.ContainerForm>
           <S.Legend></S.Legend>
