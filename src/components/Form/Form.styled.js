@@ -6,7 +6,7 @@ export const Form = styled.form`
 `
 export const ContainerForm = styled.fieldset`
   width: 500px;
-  max-height: 550px;
+  max-height: 650px;
   background-color: #fff;
   border-radius: 8px;
   border: none;
@@ -17,6 +17,11 @@ export const ContainerForm = styled.fieldset`
   @media (max-width: 768px) {
     width: 380px;
     padding: 10px;
+  }
+
+  span {
+    color: red;
+    font-size: 12px;
   }
 `
 export const Fieldset = styled.fieldset`
@@ -41,6 +46,7 @@ export const ContainerInput = styled.div`
     width: 225px;
     height: 40px;
     border: 1px solid rgba(00, 0, 0, 0.1);
+    padding-left: 6px;
 
     @media (max-width: 768px) {
       width: 170px;
