@@ -4,26 +4,13 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { yupResolver } from '@hookform/resolvers/yup'
 
-import { object, string, date, number } from 'yup'
-
-const schema = object({
-  origem: string().required('Campo obrigatório.'),
-  destino: string().required('Campo obrigatório.'),
-  entrada: string('Escolha uma data válida').required('Campo obrigatório.'),
-  saida: string('Escolha uma data válida').required('Campo obrigatório.'),
-  adultos: string().required('Campo obrigatório.').integer(),
-  criancas: string(),
-  nome: string().required('Campo obrigatório.'),
-  email: string()
-    .email('Digite um e-mail válido.')
-    .required('Campo obrigatório.')
-})
+import { PlaneIcon } from 'lucide-react'
+import { schema } from '../schema'
 
 export function Form() {
   const {
     register,
     handleSubmit: onSubmit,
-    watch,
     formState: { errors }
   } = useForm({ resolver: yupResolver(schema) })
 
@@ -39,10 +26,13 @@ export function Form() {
       <ToastContainer />
       <S.Form onSubmit={onSubmit(handleSubmit)}>
         <S.ContainerForm>
-          <S.Legend></S.Legend>
           <S.Fieldset>
+            <S.Legend>
+              Escolha seu destino! <PlaneIcon />
+            </S.Legend>
             <S.ContainerInput>
               <label htmlFor="origem">Origem</label>
+
               <input type="text" id="origem" {...register('origem')} />
               {errors?.origem && <span>{errors?.origem?.message}</span>}
             </S.ContainerInput>

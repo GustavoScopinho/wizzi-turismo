@@ -82,4 +82,12 @@ export const ContainerButton = styled.fieldset`
     }
   }
 `
-export const Legend = styled.legend``
+export const Legend = styled.legend`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+
+  color: #fff;
+  padding-bottom: 10px;
+`
