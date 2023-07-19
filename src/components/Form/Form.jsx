@@ -33,12 +33,22 @@ export function Form() {
             <S.ContainerInput>
               <label htmlFor="origem">Origem</label>
 
-              <input type="text" id="origem" {...register('origem')} />
+              <input
+                type="text"
+                id="origem"
+                {...register('origem')}
+                placeholder="Ex: São Paulo"
+              />
               {errors?.origem && <span>{errors?.origem?.message}</span>}
             </S.ContainerInput>
             <S.ContainerInput>
               <label htmlFor="destino">Destino</label>
-              <input type="text" id="destino" {...register('destino')} />
+              <input
+                type="text"
+                id="destino"
+                {...register('destino')}
+                placeholder="Ex: Orlando"
+              />
               {errors?.destino && <span>{errors?.destino?.message}</span>}
             </S.ContainerInput>
           </S.Fieldset>
@@ -58,8 +68,14 @@ export function Form() {
           <S.Fieldset>
             <S.ContainerInput>
               <label htmlFor="adultos">Adultos</label>
-              <input type="number" id="adultos" {...register('adultos')} />
+              <input
+                type="number"
+                id="adultos"
+                {...register('adultos')}
+                placeholder="Ex: 2"
+              />
               {errors?.adultos && <span>{errors?.adultos?.message}</span>}
+              {console.log(errors?.adultos)}
             </S.ContainerInput>
 
             <S.ContainerInput>
@@ -70,14 +86,24 @@ export function Form() {
           <S.Fieldset>
             <S.ContainerName>
               <label htmlFor="nome">Nome:</label>
-              <input type="text" id="nome" {...register('nome')} />
+              <input
+                type="text"
+                id="nome"
+                {...register('nome')}
+                placeholder="Ex: Claudio"
+              />
               {errors?.nome && <span>{errors?.nome?.message}</span>}
             </S.ContainerName>
           </S.Fieldset>
           <S.Fieldset>
             <S.ContainerName>
               <label htmlFor="email">Email:</label>
-              <input type="email" id="email" {...register('email')} />
+              <input
+                type="email"
+                id="email"
+                {...register('email')}
+                placeholder="Ex: claudio@hotmail.com"
+              />
               {errors?.email && <span>{errors?.email?.message}</span>}
             </S.ContainerName>
           </S.Fieldset>
