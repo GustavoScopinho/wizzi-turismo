@@ -77,6 +77,10 @@ export const ContainerButton = styled.fieldset`
     font-weight: 600;
     cursor: pointer;
 
+    &:hover {
+      background-color: #20bcbf;
+    }
+
     @media (max-width: 768px) {
       width: 360px;
     }
